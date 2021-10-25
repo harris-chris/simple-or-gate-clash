@@ -1,0 +1,11 @@
+**/*.jou
+*.log
+usage_statistics_*
+vivado_pid*
+*.cache/
+*.hw/
+*.user_files/
+*.runs/
+*.tcl
+clash-compiler/
+
