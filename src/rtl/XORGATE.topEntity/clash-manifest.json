@@ -1,0 +1,95 @@
+{
+    "components": [
+        "topEntity"
+    ],
+    "flags": [
+        20,
+        20,
+        false
+    ],
+    "hash": -5663088082276982399,
+    "dependencies": {
+        "transitive": []
+    },
+    "version": "unstable",
+    "files": [
+        {
+            "name": "topEntity.sdc",
+            "sha256": "13d4c1aafcc09a84d81d3b60d513cb901384a10e27e5a5a16572a600f15895f3"
+        },
+        {
+            "name": "XORGATE_topEntity_types.vhdl",
+            "sha256": "30510c6dff813161d82e8763d70ff5aea41f9b50e6b119635ffcda17dca9cb71"
+        },
+        {
+            "name": "topEntity.vhdl",
+            "sha256": "9266814a2c404cbfe9f6ed47de16ffd21dbb5f2263729f3340e80817cd3d3153"
+        }
+    ],
+    "top_component": {
+        "ports_flat": [
+            {
+                "direction": "in",
+                "domain": "XilinxSystem",
+                "width": 1,
+                "name": "clk",
+                "is_clock": true,
+                "type_name": "clk.XORGATE_topEntity_types.clk_XilinxSystem"
+            },
+            {
+                "direction": "in",
+                "domain": "XilinxSystem",
+                "width": 1,
+                "name": "rst",
+                "is_clock": false,
+                "type_name": "rst.XORGATE_topEntity_types.rst_XilinxSystem"
+            },
+            {
+                "direction": "in",
+                "domain": "XilinxSystem",
+                "width": 1,
+                "name": "en",
+                "is_clock": false,
+                "type_name": "en.XORGATE_topEntity_types.en_XilinxSystem"
+            },
+            {
+                "direction": "in",
+                "width": 1,
+                "name": "eta",
+                "is_clock": false,
+                "type_name": "boolean"
+            },
+            {
+                "direction": "out",
+                "width": 1,
+                "name": "result",
+                "is_clock": false,
+                "type_name": "boolean"
+            }
+        ],
+        "name": "topEntity"
+    },
+    "domains": {
+        "System": {
+            "period": 10000,
+            "init_behavior": "Defined",
+            "reset_kind": "Asynchronous",
+            "active_edge": "Rising",
+            "reset_polarity": "ActiveHigh"
+        },
+        "XilinxSystem": {
+            "period": 10000,
+            "init_behavior": "Defined",
+            "reset_kind": "Synchronous",
+            "active_edge": "Rising",
+            "reset_polarity": "ActiveHigh"
+        },
+        "IntelSystem": {
+            "period": 10000,
+            "init_behavior": "Defined",
+            "reset_kind": "Asynchronous",
+            "active_edge": "Rising",
+            "reset_polarity": "ActiveHigh"
+        }
+    }
+}

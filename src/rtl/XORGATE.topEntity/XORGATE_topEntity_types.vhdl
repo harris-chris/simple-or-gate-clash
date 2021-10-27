@@ -2,15 +2,20 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
-package ORGATE_topEntity_types is
+package XORGATE_topEntity_types is
 
+  subtype clk_XilinxSystem is std_logic;
+  subtype rst_XilinxSystem is std_logic;
+  subtype en_XilinxSystem is boolean;
   function toSLV (b : in boolean) return std_logic_vector;
   function fromSLV (sl : in std_logic_vector) return boolean;
   function tagToEnum (s : in signed) return boolean;
   function dataToTag (b : in boolean) return signed;
+  function toSLV (sl : in std_logic) return std_logic_vector;
+  function fromSLV (slv : in std_logic_vector) return std_logic;
 end;
 
-package body ORGATE_topEntity_types is
+package body XORGATE_topEntity_types is
   function toSLV (b : in boolean) return std_logic_vector is
   begin
     if b then
@@ -42,6 +47,15 @@ package body ORGATE_topEntity_types is
     else
       return to_signed(0,64);
     end if;
+  end;
+  function toSLV (sl : in std_logic) return std_logic_vector is
+  begin
+    return std_logic_vector'(0 => sl);
+  end;
+  function fromSLV (slv : in std_logic_vector) return std_logic is
+    alias islv : std_logic_vector (0 to slv'length - 1) is slv;
+  begin
+    return islv(0);
   end;
 end;
 

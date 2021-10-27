@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl2008 xil_defaultlib  \
-"../../../../src/rtl/ORGATE.topEntity/ORGATE_topEntity_types.vhdl" \
-"../../../../src/rtl/ORGATE.topEntity/topEntity.vhdl" \
-
-# Do not sort compile order
-nosort
